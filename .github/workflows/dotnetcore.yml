@@ -10,7 +10,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.108
+        dotnet-version: 3.1.100
     - name: Build with dotnet
       working-directory: Challenge195
       run: dotnet build Challenge195/Challenge195.csproj -c Release -f netcoreapp3.1
