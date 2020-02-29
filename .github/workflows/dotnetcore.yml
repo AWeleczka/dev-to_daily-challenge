@@ -17,3 +17,17 @@ jobs:
     - name: Test with dotnet
       working-directory: Challenge195
       run: dotnet test Challenge195tests/Challenge195tests.csproj -c Release -f netcoreapp3.1
+  c197:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - name: Build with dotnet
+      working-directory: Challenge197
+      run: dotnet build Challenge197/Challenge197.csproj -c Release -f netcoreapp3.1
+    - name: Test with dotnet
+      working-directory: Challenge197
+      run: dotnet test Challenge197tests/Challenge197tests.csproj -c Release -f netcoreapp3.1
